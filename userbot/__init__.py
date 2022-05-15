@@ -12,7 +12,6 @@ from distutils.util import strtobool
 from logging import DEBUG, INFO, basicConfig, getLogger
 from pathlib import Path
 from platform import python_version
-from asyncio import get_event_loop
 
 from dotenv import load_dotenv
 from pylast import LastFMNetwork, md5
@@ -26,7 +25,6 @@ STORAGE = lambda n: Storage(Path("data") / n)
 
 load_dotenv("config.env")
 
-LOOP = get_event_loop()
 
 # Bot Logs setup:
 CONSOLE_LOGGER_VERBOSE = strtobool(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
