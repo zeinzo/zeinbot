@@ -84,7 +84,7 @@ HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY")
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL", "https://github.com/zeinzo/zeinbot.git"
 )
-UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Zeinzo-Userbot")
+UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "ZeinUserbot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = strtobool(os.environ.get("CONSOLE_LOGGER_VERBOSE") or "False")
