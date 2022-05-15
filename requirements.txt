@@ -34,6 +34,8 @@ pybase64
 pyfiglet
 PyGithub
 pylast
+py-tgcalls
+git+https://github.com/yt-dlp/yt-dlp@master
 pySmartDL
 python-barcode
 python-dateutil
