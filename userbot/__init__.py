@@ -19,9 +19,6 @@ from telethon import TelegramClient, version
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 
-from pySmartDL import SmartDL
-from pytgcalls import PyTgCalls
-
 from .storage import Storage
 
 STORAGE = lambda n: Storage(Path("data") / n)
@@ -188,19 +185,14 @@ def shutdown_bot(*_):
 
 signal.signal(signal.SIGTERM, shutdown_bot)
 
-
 bot = TelegramClient(
     session=StringSession(STRING_SESSION),
     api_id=API_KEY,
     api_hash=API_HASH,
     connection=ConnectionTcpAbridged,
     auto_reconnect=True,
-    connection_retries=None,
-    )
-    call_py = PyTgCalls(bot)
-except Exception as e:
-    print(f"STRING_SESSION - {e}")
-    sys.exit()
+)
+
 
 
 async def check_botlog_chatid():
